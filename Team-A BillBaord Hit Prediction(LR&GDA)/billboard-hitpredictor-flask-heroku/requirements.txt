@@ -1,0 +1,14 @@
+scikit-learn
+numpy
+pandas
+matplotlib
+streamlit
+Pillow
+seaborn
+flask
+gunicorn
+Jinja2
+MarkupSafe
+Werkzeug
+wheel
+itsdangerous

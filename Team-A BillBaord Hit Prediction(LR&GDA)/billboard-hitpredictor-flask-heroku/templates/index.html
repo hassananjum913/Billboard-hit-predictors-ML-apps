@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .custom_fonts{
+      font-size: 30px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+     
+    }
+    .center {
+    display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 50%;
+     }
+    body {
+      font-size: 20px;
+      font-family: Arial, sans-serif;
+      max-width: max-content;
+      margin: auto;
+}
+    input[type=float], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    button[type=submit] {
+      width: 100%;
+      background-color: #090f0a;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #040504;
+    }
+    
+    div {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    </style>
+  <img src="https://thereadersbureau.com/wp-content/uploads/2016/05/billboard.png" alt="bb_hot_hit" width="250" height="200" class="center">
+  <title>BillBoard Hit Predictor Using Machine Learning</title>
+ 
+  
+</head>
+
+<body style="background:'white';">
+ <div class="login">
+	<h1 color='white'>BillBoard Hit Predictor Using Machine Learning</h1>
+             <div style=color:red class="custom_fonts">{{ prediction_text1 }}</div>
+              <div style=color:green class="custom_fonts">{{ prediction_text2 }}</div>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <div>
+    	   Danceability:<input type="float" name="danceability" placeholder="danceability" required="required" step='any'/><br>
+         Energy: <input type="float" name="energy" placeholder="energy" required="required" step='any'/><br>
+		     Speechiness: <input type="float" name="speechiness" placeholder="speechiness" required="required" step='any'/><br>
+         Acousticness: <input type="float" name="acousticness" placeholder="acousticness" required="required" step='any'/><br>
+         Instrumentalness: <input type="float" name="instrumentalness" placeholder="instrumentalness" required="required" step='any'/><br>
+         Liveness: <input type="float" name="liveness" placeholder="liveness" required="required" step='any'/><br>
+         Valence: <input type="float" name="valence" placeholder="valence" required="required" step='any'/><br>
+         Tempo: <input type="float" name="tempo" placeholder="tempo" required="required" step='any'/><br>
+         Duration in ms: <input type="float" name="duration_ms" placeholder="duration_ms" required="required" step='any'/><br>
+         Louness: <input type="float" name="loudness" placeholder="loudness" required="required" step='any'/><br>
+      </div>
+         <button type="submit" class="custom_fonts">Submit</button>
+       
+    </form>
+
+   <br>
+   <br>
+ 
+
+ </div>
+</body>
+</html>
