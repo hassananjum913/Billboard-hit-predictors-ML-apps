@@ -2,7 +2,7 @@
 
 **TITLE: Hit Predict-Predicting Billboard Hits Using Spotify Data**
 
-![](.//media/image1.jpeg){width="6.1in" height="3.191666666666667in"}
+![](.//media/image1.jpeg)
 
 > **AIM:**
 >
@@ -28,15 +28,14 @@ INTRODUCTION:
 -   We extracted different audio features from the Spotify API4 (Table
     1).
 
-![](.//media/image2.png){width="3.3541666666666665in"
-height="1.65625in"}
+![](.//media/image2.png)
 
 Table 1
 
 -   We created the Artist Score metric, assigning a score of 1 to a song
     if the artist previously had a Billboard hit, and 0 otherwise.
 
-> ![](.//media/image3.png){width="4.585416666666666in" height="2.25in"}
+> ![](.//media/image3.png)
 
 -   Data for \~4000 songs was collected from Billboard.com3 and the
     Million Song Dataset5. Songs were from 1990-2018.
@@ -62,7 +61,7 @@ OVERVIEW:
 DATASET:
 ========
 
-![](.//media/image4.png){width="6.8902777777777775in" height="1.9in"}
+![](.//media/image4.png)
 =====================================================================
 
 -   SpotifyID: Unique ID for tracks in Spotify API.
@@ -126,7 +125,7 @@ EXPLORATORY DATA ANALYSIS
 Checking Target Variable is imbalanced or not.
 ==============================================
 
-![](.//media/image5.png){width="5.489583333333333in" height="3.09375in"}
+![](.//media/image5.png)
 ========================================================================
 
 Target variable is not imbalanced.
@@ -135,83 +134,81 @@ Target variable is not imbalanced.
 Top 10 Energetic Songs
 ======================
 
-![](.//media/image6.png){width="4.9in" height="4.075in"}
+![](.//media/image6.png)
 ========================================================
 
 Top 10 Danceable songs
 ======================
 
-![](.//media/image7.png){width="4.906944444444444in" height="4.391666666666667in"}
+![](.//media/image7.png)
 ==================================================================================
 
 Count of Track Based on Keys
 ============================
 
-![](.//media/image8.png){width="6.748611111111111in" height="2.9479166666666665in"}
+![](.//media/image8.png)
 ===================================================================================
 
 Distribution of song duration 
 =============================
 
-![](.//media/image9.png){width="5.833333333333333in" height="3.4583333333333335in"}
+![](.//media/image9.png)
 ===================================================================================
 
 Distribution of track tempo
 ===========================
 
-![](.//media/image10.png){width="5.458333333333333in" height="3.4375in"}
+![](.//media/image10.png)
 ========================================================================
 
 Relationship Plots: 3D Scatter Plots
 ====================================
 
-![](.//media/image11.png){width="3.173611111111111in" height="3.2416666666666667in"}![](.//media/image12.png){width="3.1666666666666665in" height="3.1in"}
+![](.//media/image11.png)
 ==========================================================================================================================================================
 
 Relationship Plots: 2D Scatter Plots
 ====================================
 
-![](.//media/image13.png){width="3.15in" height="2.691666666666667in"}![](.//media/image14.png){width="3.339583333333333in" height="2.6333333333333333in"}
+![](.//media/image13.png)
 ==========================================================================================================================================================
 
-![](.//media/image15.png){width="2.8in" height="2.308333333333333in"}![](.//media/image16.png){width="3.26875in" height="2.691666666666667in"}
+![](.//media/image15.png)
 ==============================================================================================================================================
 
 Overall Relationship plot: correlation heatmap.
 ===============================================
 
-![](.//media/image17.png){width="6.65in" height="3.808333333333333in"}
+![](.//media/image17.png)
 ======================================================================
 
 Statistical Significance of Features based on z-test and chi-square test
 ========================================================================
 
-![](.//media/image18.png){width="4.322916666666667in" height="3.5625in"}
+![](.//media/image18.png)
 ========================================================================
 
-![](.//media/image19.png){width="3.8125in" height="1.1354166666666667in"}
+![](.//media/image19.png)
 =========================================================================
 
 VIF Plot: Multicollinearity check
 =================================
 
-![](.//media/image20.png){width="7.298611111111111in" height="3.1118055555555557in"}
+![](.//media/image20.png)
 ====================================================================================
 
 MI SCORES:
 ==========
 
-![](.//media/image21.PNG){width="3.9230763342082238in" height="3.03799321959755in"}
+![](.//media/image21.PNG)
 ===================================================================================
 
-![](.//media/image22.PNG){width="4.184027777777778in"
-height="3.4679483814523184in"}
+![](.//media/image22.PNG)
 
  Conclusion based on EDA:
 ========================
 
-![](.//media/image23.png){width="7.648611111111111in"
-height="1.5705129046369204in"}
+![](.//media/image23.png)
 
 MODEL BUILDING:
 ===============
@@ -222,19 +219,19 @@ Random Forest:
 For Random Forest model, a small change in the features have been done. As we could see above that the MI score is very less for Key(0.000). So, a small feature engineering is done so that the key and mode is combined and made as a single feature 'Key_mode_ratio' which gave a fairly good MI score and many musicians also say there is a relationship between key and mode as well.
 ===========================================================================================================================================================================================================================================================================================================================================================================================
 
-![](.//media/image24.PNG){width="3.5902777777777777in" height="2.016790244969379in"}
+![](.//media/image24.PNG)
 ====================================================================================
 
 The random forest model gave about 81% accuracy.
 ================================================
 
-![](.//media/image25.PNG){width="7.298611111111111in" height="1.4583333333333333in"}
+![](.//media/image25.PNG)
 ====================================================================================
 
 The confusion matrix of the random forest model is given below:
 ===============================================================
 
-![](.//media/image26.PNG){width="4.319444444444445in" height="0.9375in"}
+![](.//media/image26.PNG)
 ========================================================================
 
 QDA:
@@ -270,10 +267,10 @@ The features that were taken for training QDA model were:
 The QDA model gave a fairly good accuracy of 79% and the classification report is given below:
 ==============================================================================================
 
-![](.//media/image27.PNG){width="6.388888888888889in" height="2.1596817585301835in"}
+![](.//media/image27.PNG)
 ====================================================================================
 
-![](.//media/image28.jpeg){width="6.409722222222222in" height="3.6025634295713034in"}
+![](.//media/image28.jpeg)
 =====================================================================================
 
 DEPLOYMENT:
@@ -288,11 +285,8 @@ The random forest model is deployed using flask server and Heroku into a real ti
 The link to the website is: <https://billboard-hit-predictor.herokuapp.com/>
 ============================================================================
 
-![](.//media/image29.png){width="7.298611111111111in"
-height="3.6527777777777777in"}\
-![](.//media/image30.png){width="7.298611111111111in"
-height="3.6493055555555554in"}
-
+![](.//media/image29.png)
+![](.//media/image30.png)
 **STREAMLIT DEPLOYEMENT:**
 
 The random forest model is deployed using streamlit and Heroku into a real time website.
@@ -301,10 +295,10 @@ The random forest model is deployed using streamlit and Heroku into a real time 
 The link to the website is: <https://bhp-streamlit-heroku.herokuapp.com/>
 =========================================================================
 
-![](.//media/image31.jpeg){width="3.9097222222222223in" height="4.513194444444444in"}
+![](.//media/image31.jpeg)
 =====================================================================================
 
-![](.//media/image32.jpeg){width="3.9166666666666665in" height="4.903251312335958in"}
+![](.//media/image32.jpeg)
 =====================================================================================
 
 **TEAM MEMBERS:**
